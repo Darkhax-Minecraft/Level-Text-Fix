@@ -5,6 +5,10 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
+  "client": [
+    "MixinComponent",
+    "MixinEnchantment"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
