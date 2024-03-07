@@ -13,9 +13,17 @@ public class MixinEnchantment {
 
     @ModifyArg(method = "getFullname(I)Lnet/minecraft/network/chat/Component;", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/chat/MutableComponent;append(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;"), index = 0)
     private Component replaceLevelComponent(Component original) {
+
         if (LevelTextFixCommon.config != null && LevelTextFixCommon.config.replaceRomanNumerals && original.getContents() instanceof TranslatableContents translatable && translatable.getKey().startsWith("enchantment.level.")) {
-            return Component.literal(translatable.getKey().substring(18));
+
+            final String enchantmentLevel = translatable.getKey().substring(18);
+
+            if (LevelTextFixCommon.isNumeric(enchantmentLevel)) {
+
+                return Component.literal(enchantmentLevel);
+            }
         }
+
         return original;
     }
 }

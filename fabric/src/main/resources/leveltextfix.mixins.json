@@ -6,8 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "MixinComponent",
-    "MixinEnchantment"
+    "MixinComponent"
   ],
   "injectors": {
     "defaultRequire": 1
