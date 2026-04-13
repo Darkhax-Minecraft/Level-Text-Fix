@@ -1,12 +1,12 @@
-package net.darkhax.leveltextfix.fabric.impl;
+package net.darkhax.leveltextfix.fabric;
 
 import net.darkhax.leveltextfix.common.impl.LevelTextFixMod;
 import net.fabricmc.api.ClientModInitializer;
 
-public class FabricModClient implements ClientModInitializer {
+public class LevelTextFixFabricClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LevelTextFixMod.getInstance().init();
+        LevelTextFixMod.init();
     }
 }

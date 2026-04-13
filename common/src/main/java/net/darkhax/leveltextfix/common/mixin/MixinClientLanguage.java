@@ -12,8 +12,7 @@ public class MixinClientLanguage {
 
     @Inject(method = "getOrDefault", at = @At("HEAD"), cancellable = true)
     public void getOrDefault(String key, String fallback, CallbackInfoReturnable<String> cbi) {
-        final LevelTextFixMod mod = LevelTextFixMod.getInstance();
-        if (mod.hasInitialized() && mod.getConfig() != null && mod.getConfig().replace_roman_numerals) {
+        if (LevelTextFixMod.config != null && LevelTextFixMod.config.replace_roman_numerals) {
             if (key.startsWith("enchantment.level.") && LevelTextFixMod.isNumeric(key.substring(18))) {
                 cbi.setReturnValue(key.substring(18));
             }
@@ -25,8 +24,7 @@ public class MixinClientLanguage {
 
     @Inject(method = "has", at = @At("HEAD"), cancellable = true)
     public void has(String key, CallbackInfoReturnable<Boolean> cbi) {
-        final LevelTextFixMod mod = LevelTextFixMod.getInstance();
-        if (mod.hasInitialized() && mod.getConfig() != null && mod.getConfig().replace_roman_numerals) {
+        if (LevelTextFixMod.config != null && LevelTextFixMod.config.replace_roman_numerals) {
             if (key.startsWith("enchantment.level.") && LevelTextFixMod.isNumeric(key.substring(18))) {
                 cbi.setReturnValue(true);
             }
