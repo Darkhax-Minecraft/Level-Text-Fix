@@ -1,0 +1,41 @@
+{
+  "mod": {
+    "name": "LevelTextFix",
+    "group": "net.darkhax.leveltextfix",
+    "authors": [
+      "Darkhax"
+    ],
+    "id": "leveltextfix",
+    "license": "LGPL 2.1",
+    "description": "Fix issues related to level text, and adds acessibility options.",
+    "repo": "https://github.com/Darkhax-Minecraft/Level-Text-Fix",
+    "client": true
+  },
+  "curseforge": {
+    "slug": "level-text-fix",
+    "id": "840817"
+  },
+  "modrinth": {
+    "slug": "level-text-fix",
+    "id": "trJAIZhE"
+  },
+  "dependencies": [
+    {
+      "name": "Prickle",
+      "type": "required",
+      "maven": {
+        "common": "net.darkhax.pricklemc:prickle-common-26.1.2:26.1.2.1",
+        "neoforge": "net.darkhax.pricklemc:prickle-neoforge-26.1.2:26.1.2.1",
+        "fabric": "net.darkhax.pricklemc:prickle-fabric-26.1.2:26.1.2.1"
+      },
+      "curseforge": {
+        "slug": "prickle",
+        "id": "1023259"
+      },
+      "modrinth": {
+        "slug": "prickle",
+        "id": "aaRl8GiW"
+      }
+    }
+  ]
+}
