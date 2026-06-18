@@ -4,9 +4,9 @@ issueTrackerURL = "https://github.com/Darkhax-Minecraft/Level-Text-Fix/issues"
 
 [[mods]]
 modId = "leveltextfix"
-version = "26.1.2.0"
+version = "26.2.0.0"
 displayName = "LevelTextFix"
-updateJSONURL = "https://updates.blamejared.com/get?n=leveltextfix&gv=26.1.2&ml=neoforge"
+updateJSONURL = "https://updates.blamejared.com/get?n=leveltextfix&gv=26.2&ml=neoforge"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/level-text-fix"
 logoFile = "logo_leveltextfix.png"
 logoBlur = false
@@ -23,14 +23,14 @@ config = "leveltextfix.neoforge.mixins.json"
 [[dependencies.leveltextfix]]
 modId = "minecraft"
 type = "required"
-versionRange = "26.1"
+versionRange = "26.2"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.leveltextfix]]
 modId = "neoforge"
 type = "required"
-versionRange = "[26.1.0.1-beta,)"
+versionRange = "[26.2.0.1-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
